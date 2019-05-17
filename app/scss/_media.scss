@@ -1,0 +1,116 @@
+@import "vars";
+@import "../libs/bootstrap/scss/mixins/breakpoints";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+
+    body{
+        font-size: 28px;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    header{}
+
+    section.reasons{
+        padding-top: 7.2em;    
+        .reasons-item{
+            .col-sm-6{
+                line-height: normal;
+                p{
+                    margin-top: 1.65em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    section.features{
+    
+        .features-item{
+	
+            .features-item-title{
+                h2{
+                    font-size: 2.4em;
+               }
+            }
+            .features-item-text{
+                p{
+                    padding: 1em 0.4em;
+                    font-size: 1.1em;
+                }   
+            }
+        }
+    }
+}
+
+@media (max-width:528px) {
+    body{
+        font-size: 26px;
+    }
+}
+
+@media (max-width:481px) { 
+    body{
+        font-size: 24px;
+    }
+}
+@media (max-width:434px) {
+    body{
+        font-size: 22px;
+    }
+}
+@media (max-width:387px) {
+    body{
+        font-size: 20px;
+    }
+}
+@media (max-width:340px) {
+    body{
+        font-size: 18px;
+    }
+}
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+    
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
