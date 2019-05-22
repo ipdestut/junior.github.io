@@ -23,6 +23,15 @@
 		});
 	});
 
+
+	$('.treners-wrapper').lightSlider({
+		item: 1,
+		loop: true,
+		auto: true,
+		pause: 5000,
+		slideMargin: 100,
+	});
+
 	$(window).on('resize', function(){
 		win_width = $(window).width();
 		mobile = win_width < 576 ? true : false;

@@ -1,16 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="768px" height="768px" viewBox="0 0 768 768" enable-background="new 0 0 768 768" xml:space="preserve">
-<g>
-	<circle fill="#FFFFFF" cx="384.893" cy="412.856" r="10.724"/>
-	<path fill="#FFFFFF" d="M428.919,427.24h-16.247c2.04-1.512,2.741-4.313,1.518-6.627l-19.88-37.619v-16.038
-		c0-0.228-0.052-0.439-0.068-0.662l27.074-20.115c2.319-1.724,2.803-5.001,1.08-7.319c-1.728-2.319-5-2.802-7.318-1.079
-		l-26.485,19.679l-39.456-1.874c-2.865-0.129-5.335,2.09-5.472,4.976c-0.136,2.887,2.09,5.337,4.978,5.474l26.837,1.272v15.56
-		l-20.216,37.719c-1.24,2.316-0.542,5.137,1.51,6.654h-17.559c-1.158,0-2.093,0.936-2.093,2.092s0.935,2.092,2.093,2.092h89.705
-		c1.157,0,2.093-0.936,2.093-2.092S430.076,427.24,428.919,427.24z M364.483,425.525l15.747-29.381
-		c1.379,0.791,2.958,1.281,4.662,1.281c1.666,0,3.206-0.469,4.563-1.227l15.485,29.301c0.384,0.725,0.938,1.287,1.56,1.74h-43.514
-		C363.587,426.795,364.107,426.227,364.483,425.525z"/>
-</g>
-</svg>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="93.890999"
+   height="95"
+   viewBox="0 0 93.890999 95"
+   enable-background="new 0 0 768 768"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="2.svg"><metadata
+     id="metadata13"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs11" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1512"
+     inkscape:window-height="778"
+     id="namedview9"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.31"
+     inkscape:cx="46.878"
+     inkscape:cy="47.425"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /><g
+     id="g3"
+     style="fill:#000000;fill-opacity:1"
+     transform="translate(-337.122,-336.425)"><circle
+       cx="384.89301"
+       cy="412.85599"
+       r="10.724"
+       id="circle5"
+       style="fill:#000000;fill-opacity:1" /><path
+       d="m 428.919,427.24 -16.247,0 c 2.04,-1.512 2.741,-4.313 1.518,-6.627 l -19.88,-37.619 0,-16.038 c 0,-0.228 -0.052,-0.439 -0.068,-0.662 l 27.074,-20.115 c 2.319,-1.724 2.803,-5.001 1.08,-7.319 -1.728,-2.319 -5,-2.802 -7.318,-1.079 l -26.485,19.679 -39.456,-1.874 c -2.865,-0.129 -5.335,2.09 -5.472,4.976 -0.136,2.887 2.09,5.337 4.978,5.474 l 26.837,1.272 0,15.56 -20.216,37.719 c -1.24,2.316 -0.542,5.137 1.51,6.654 l -17.559,0 c -1.158,0 -2.093,0.936 -2.093,2.092 0,1.156 0.935,2.092 2.093,2.092 l 89.705,0 c 1.157,0 2.093,-0.936 2.093,-2.092 0,-1.156 -0.937,-2.093 -2.094,-2.093 z m -64.436,-1.715 15.747,-29.381 c 1.379,0.791 2.958,1.281 4.662,1.281 1.666,0 3.206,-0.469 4.563,-1.227 l 15.485,29.301 c 0.384,0.725 0.938,1.287 1.56,1.74 l -43.514,0 c 0.601,-0.444 1.121,-1.012 1.497,-1.714 z"
+       id="path7"
+       style="fill:#000000;fill-opacity:1"
+       inkscape:connector-curvature="0" /></g></svg>

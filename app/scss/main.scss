@@ -1,5 +1,6 @@
 @import "vars";
 @import "fonts";
+@import "sports";
 @import "libs";
 
 ::placeholder {
@@ -20,19 +21,23 @@ body {
 	overflow-x: hidden;
 	color: $text;
 	background-color: #fff;
-	input, textarea {
+
+	input,
+	textarea {
 		border: #666 1px solid;
 		outline: none;
+
 		&:focus:required:invalid {
 			border-color: red;
 		}
+
 		&:required:valid {
 			border-color: green;
 		}
 	}
 }
 
-h1{
+h1 {
 	font-size: 3.33em;
 	color: #222;
 	text-align: center;
@@ -42,6 +47,7 @@ h1{
 	display: block;
 	max-width: 100%;
 	height: auto;
+
 	&.img-width {
 		width: 100%;
 	}
@@ -51,19 +57,21 @@ h1{
 	text-align: center;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: bold;
 	font-style: italic;
 }
 
 // HEADER
-header{
-	.float-panel{
-		background-color: rgba(255,255,255,0.8);
+header {
+	.float-panel {
+		background-color: rgba(255, 255, 255, 0.8);
 		position: fixed;
 		width: 100%;
 		z-index: 100;
-		p{
+
+		p {
 			font-size: 0.8em;
 			font-style: italic;
 			text-align: right;
@@ -71,82 +79,94 @@ header{
 			margin-top: 0.33em;
 			color: #2d2a4b;
 		}
-		a{
+
+		a {
 			font-size: 1em;
 			font-style: italic;
 			color: #618220;
-			&::before{
+
+			&::before {
 				content: '\2706';
 				color: #54a2c0;
 			}
 		}
 	}
-	.main-panel{
-		.slogan-logo{
+
+	.main-panel {
+		.slogan-logo {
 			margin-top: 2.2em;
-			p{
-				display: inline-block;
+
+			p {
 				float: left;
 				font-style: italic;
 				width: 60%;
 				padding-top: 1.7em;
-				span{
+
+				span {
 					display: block;
 				}
 			}
-			a{
+
+			a {
 				float: left;
 				width: 40%;
-				img{
 
-				}
+				img {}
 			}
 		}
-		.animate-wrapper{
+
+		.animate-wrapper {
 			position: relative;
 			height: 16.5em;
-			.animate-revolver{}
-			.animate-title{
+
+			.animate-revolver {}
+
+			.animate-title {
 				position: absolute;
 				border-radius: 50%;
 				width: 8em;
 				height: 8em;
 				background-color: #774a87;
 				right: 55%;
-				h2{
+
+				h2 {
 					font-size: 1.1em;
 					color: rgb(255, 255, 255);
 					font-weight: bold;
 					line-height: 1.2;
 					text-align: center;
 					text-transform: uppercase;
-					margin-top: 3.3em;					  
+					margin-top: 3.3em;
 				}
 			}
-			.animate-balls{
-				p{}
+
+			.animate-balls {
+				p {}
 			}
-			.animate-description{
+
+			.animate-description {
 				width: 50%;
 				height: 10em;
 				position: absolute;
-				background-color: rgba(255,255,255,0.9);
+				background-color: rgba(255, 255, 255, 0.9);
 				border-radius: 0.55em;
 				box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 				padding: 0.8em 0.85em 0.5em 1.4em;
 				bottom: 0;
 				right: 0;
 
-				h3{
+				h3 {
 					font-weight: normal;
 					line-height: 1.2;
-					span{
+
+					span {
 						font-size: 1.3em;
 						display: block;
 						font-weight: bold;
 						text-transform: uppercase;
 					}
 				}
+
 				p {
 					position: absolute;
 					font-size: 0.8em;
@@ -158,7 +178,8 @@ header{
 				}
 			}
 		}
-		.long-slogan{
+
+		.long-slogan {
 			font-size: 1.65em;
 			color: rgb(255, 255, 255);
 			font-weight: bold;
@@ -170,7 +191,7 @@ header{
 }
 
 // Section reasons
-section.reasons{
+section.reasons {
 	background-color: #fff;
 	background-image: url('../img/reasons/top_reasons_bg.svg');
 	background-position: top center;
@@ -179,18 +200,21 @@ section.reasons{
 
 	padding: 9.5em 0 2.7em;
 
-	.reasons-item{
+	.reasons-item {
 		margin-top: 2.2em;
 		margin-bottom: 4.4em;
-		.col-sm-6{
+
+		.col-sm-6 {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
-		img{
+
+		img {
 			height: 10em;
 		}
-		p{
+
+		p {
 			display: inline-block;
 			text-align: justify;
 			font-size: 1.45em;
@@ -200,71 +224,85 @@ section.reasons{
 	}
 }
 
-section.tasks{
+section.tasks {
 	padding: 4em 0;
-	h1{
+
+	h1 {
 		color: #fff;
 		margin-bottom: 1.7em;
 	}
-	p{
+
+	p {
 		font-size: 2em;
 		color: #fff;
 		text-align: center;
 	}
 }
 
-section.features{
-	h1{
+section.features {
+	h1 {
 		margin-bottom: 1.3em;
 	}
 
-	.features-item{
-		&.color{
-			&-blue{
+	.features-item {
+		&.color {
+			&-blue {
 				background-color: $color-blue;
 
-				.features-item-text{
+				.features-item-text {
 					background-color: lighten($color-blue, 25%);
 				}
 			}
-			&-purple{
+
+			&-purple {
 				background-color: $color-purple;
-				.features-item-text{
+
+				.features-item-text {
 					background-color: lighten($color-purple, 25%);
 				}
 			}
-			&-green{
+
+			&-green {
 				background-color: $color-green;
-				.features-item-text{
+
+				.features-item-text {
 					background-color: lighten($color-green, 25%);
 				}
 			}
-			&-red{
+
+			&-red {
 				background-color: $color-red;
-				.features-item-text{
+
+				.features-item-text {
 					background-color: lighten($color-red, 25%);
 				}
 			}
-			&-orange{
+
+			&-orange {
 				background-color: $color-orange;
-				.features-item-text{
+
+				.features-item-text {
 					background-color: lighten($color-orange, 25%);
 				}
-			}																
-		}		
-		.features-item-title{
-			cursor: pointer;			
-			h2{
+			}
+		}
+
+		.features-item-title {
+			cursor: pointer;
+
+			h2 {
 				font-size: 3.2em;
 				padding: 0.7em 0;
 				text-align: center;
 				color: #fff;
 			}
 		}
-		.features-item-text{
+
+		.features-item-text {
 			transform-origin: top;
 			display: none;
-			p{
+
+			p {
 				padding: 1em 0;
 				font-size: 1.2em;
 				line-height: 1.5;
@@ -273,6 +311,72 @@ section.features{
 
 		}
 	}
+}
+
+
+section.treners {
+
+	padding: 5em 0;
+
+	h1 {
+		margin-bottom: 1.2em;
+	}
+
+		.treners-wrapper {
+			.treners-item {
+				overflow: hidden;
+				padding: 0 40px;	
+				&-image {
+					text-align: center;
+
+					img {
+						max-width: 80%;
+					}
+				}
+
+				&-desc {
+
+					.trener-name {
+						font-size: 2.667em;
+					}
+
+					.trener-sport {
+						color: #54a2c0;
+						font-size: 1.667em;
+
+						i {
+							font-size: 0.9em;
+							line-height: 1;
+						}
+					}
+
+					.trener-desc {
+						font-size: 1.667em;
+					}
+				}
+			}
+		}
+
+		.lSAction>.lSPrev {
+			transform: rotate(45deg);
+			left: 10px;
+		}
+
+		.lSAction>.lSNext {
+			transform: rotate(225deg);
+			right: 10px;
+		}
+
+		.lSAction>a {
+			width: 24px;
+			height: 24px;
+			background-image: none;
+			margin-top: -12px;
+			border: 4px solid #6895ba;
+			border-top: none;
+			border-right: none;
+		}
+	
 }
 
 @import "media"; // Always at the end
