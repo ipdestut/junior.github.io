@@ -24,6 +24,14 @@
 	});
 
 
+	$('.director-more').on('click', function(e){
+		e.preventDefault();
+
+		$(this).closest('.director').find('.director-info-more').slideToggle();
+
+		$(this).toggleClass('active');
+	});
+
 	$('.treners-wrapper').lightSlider({
 		item: 1,
 		loop: true,
