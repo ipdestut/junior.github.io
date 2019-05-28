@@ -101,6 +101,7 @@ header {
 
 	.main-panel {
 		padding: 1em 0 0;
+
 		.slogan-logo {
 			margin-top: 1.5em;
 			overflow: hidden;
@@ -127,7 +128,8 @@ header {
 		.animate-wrapper {
 			position: relative;
 			padding: 2em 0 5.4em;
-			&::after{
+
+			&::after {
 				content: '';
 				display: table;
 				clear: both;
@@ -139,7 +141,8 @@ header {
 				height: 15em;
 				top: -6em;
 				left: 3em;
-				&::after{
+
+				&::after {
 					content: '';
 					position: absolute;
 					height: 100%;
@@ -149,37 +152,54 @@ header {
 					background-image: url('../img/logo_jun_1.svg');
 					background-size: contain;
 				}
-				&-wrap{
+
+				&-wrap {
 					height: 98%;
 					width: 98%;
 					margin: 1%;
+					transform-origin: center;
 					background-image: url('../img/logo_jun_2.svg');
 					background-size: contain;
-					i {
-						position: absolute;
-						color: #fff;
-						font-size: 2.5em;
-						&.sp-run{
-							top: 0.9em;
-							left: 1.5em;
-						}
-						&.sp-football{
-							top: 3em;
-							left: 0.8em;
-						}
-						&.sp-swim{
-							top: 4.4em;
-							left: 2.5em;
-						}
-						&.sp-fight{
-							top: 3em;
-							left: 4.3em;
-						}
-						&.sp-gym{
-							top: 0.9em;
-							left: 3.6em;
-						}									
-					}	
+					transition: transform 1s ease-out;
+				}
+
+				i {
+					position: absolute;
+					color: #fff;
+					font-size: 2.5em;
+					cursor: pointer;
+					z-index: 3;
+					transition: opacity 0.5s ease-out;
+
+					&:hover {
+						text-shadow: 0 0 0.5em #fff;
+					}
+
+					&.pos4 {
+						top: 0.9em;
+						left: 1.5em;
+					}
+
+					&.pos3 {
+						top: 3.1em;
+						left: 0.8em;
+					}
+
+					&.pos2 {
+						top: 4.4em;
+						left: 2.5em;
+					}
+
+					&.pos1 {
+						top: 3.1em;
+						left: 4.3em;
+					}
+
+					&.pos5 {
+						top: 0.9em;
+						left: 3.6em;
+					}
+
 				}
 			}
 
@@ -188,11 +208,29 @@ header {
 				border-radius: 50%;
 				width: 8.5em;
 				height: 8.5em;
-				background-color: #774a87;
 				top: -1em;
 				right: calc(50% + 2.5em);
+				transition: background-color 1s ease-out;
+
+				&.pos1, &.pos6{
+					background-color: $color-purple;
+				}
+				&.pos2{
+					background-color: $color-red;
+				}
+				&.pos3{
+					background-color: $color-orange;
+				}
+				&.pos4{
+					background-color: $color-green;
+				}
+				&.pos5{
+					background-color: $color-blue;
+				}
 
 				h2 {
+					position: absolute;
+					width: 100%;
 					font-size: 1.05em;
 					color: rgb(255, 255, 255);
 					font-weight: bold;
@@ -200,18 +238,27 @@ header {
 					text-align: center;
 					text-transform: uppercase;
 					margin-top: 3.3em;
+					opacity: 0;
+					transition: opacity 800ms ease-out;
+					&.active{
+						opacity: 1;
+					}
 				}
 			}
 
 			.animate-balls {
 				position: absolute;
 				background-image: url('../img/round.svg');
+				background-repeat: no-repeat;
+				background-position: center;
 				background-size: contain;
 				width: 9em;
 				height: 9em;
 				top: 7em;
-				right: calc(50% + 7.5em); 
+				right: calc(50% + 7.5em);
 				transform: rotate(36deg);
+				transition: transform 1s ease-out;
+
 				p {
 					text-align: center;
 					padding-top: 4em;
@@ -219,6 +266,7 @@ header {
 					height: 100%;
 					width: 100%;
 					transform: rotate(-36deg);
+					transition: transform 1s ease-out;
 				}
 			}
 
@@ -233,20 +281,42 @@ header {
 				padding: 0.8em 0.85em 0.5em 1.4em;
 				bottom: 0;
 				right: 0;
-
-				h3 {
-					font-weight: normal;
-					font-size: 1em;
-					line-height: 1.2;
-
-					span {
-						font-size: 1.333em;
-						display: block;
-						font-weight: bold;
-						text-transform: uppercase;
+				overflow: hidden;
+				&-wrap{
+					h3 {
+						position: absolute;
+						width: 100%;
+						opacity: 0;
+						font-weight: normal;
+						font-size: 1em;
+						line-height: 1.2;
+						transition: opacity 1s ease-out;
+						span {
+							font-size: 1.333em;
+							display: block;
+							font-weight: bold;
+							text-transform: uppercase;
+						}
+						&.active{
+							opacity: 1;
+						}
+						&.pos1 span{
+							color: $color-purple;
+						}
+						&.pos2 span{
+							color: $color-red;
+						}
+						&.pos3 span{
+							color: $color-orange;
+						}
+						&.pos4 span{
+							color: $color-green;
+						}
+						&.pos5 span{
+							color: $color-blue;
+						}						
 					}
 				}
-
 				p {
 					position: absolute;
 					font-size: 0.8em;
@@ -255,7 +325,7 @@ header {
 					margin: 0;
 					bottom: 0.5em;
 					right: 0.8em;
-				}
+				}				
 			}
 		}
 
@@ -403,11 +473,12 @@ section.treners {
 		margin-bottom: 1.2em;
 	}
 
-	.treners-container{
+	.treners-container {
 		margin: 0 -2em;
 	}
+
 	.treners-wrapper {
-		
+
 		.treners-item {
 			overflow: hidden;
 			padding: 0 2em;
@@ -465,7 +536,7 @@ section.treners {
 
 }
 
-section.director{
+section.director {
 	padding: 5em 0;
 
 	.container:not(.diet) {
@@ -477,29 +548,35 @@ section.director{
 		margin-bottom: 1.2em;
 	}
 
-	.director-info{
+	.director-info {
 		padding-left: 3em;
 		padding-right: 3em;
-		&-desc{
+
+		&-desc {
 			display: flex;
 			flex-direction: column;
-			.director-name{
+
+			.director-name {
 				font-size: 2em;
 			}
-			.director-desc{
+
+			.director-desc {
 				font-size: 1.33em;
 				margin-bottom: 1em;
 				flex-grow: 1;
 			}
-			.director-services{
+
+			.director-services {
 				flex-grow: 1;
 				font-size: 1.667em;
 				font-weight: bold;
-				p{
-					margin:1em 0;
+
+				p {
+					margin: 1em 0;
 				}
 			}
-			.director-more{
+
+			.director-more {
 				font-size: 1.33em;
 				font-weight: bold;
 				color: #222;
@@ -507,7 +584,7 @@ section.director{
 				text-decoration: none;
 
 
-				&::after{
+				&::after {
 					content: '';
 					position: absolute;
 					display: inline-block;
@@ -521,24 +598,25 @@ section.director{
 					transition: all 0.4s ease-out;
 				}
 
-				span{
+				span {
 					transition: all 0.4s ease-out;
 					border-bottom: 2px solid transparent;
 				}
 
-				&:hover span{
+				&:hover span {
 					border-bottom: 2px solid #222;
 				}
 
 				&.active {
-					&::after{
+					&::after {
 						transform: rotate(225deg);
 						margin-top: 0.4em;
 					}
 				}
 			}
 		}
-		&-photo{
+
+		&-photo {
 			text-align: right;
 
 			img {
@@ -546,12 +624,14 @@ section.director{
 			}
 		}
 	}
-	.director-info-more{
+
+	.director-info-more {
 		display: none;
 		padding-top: 3em;
 		padding-left: 3em;
 		padding-right: 3em;
-		p{
+
+		p {
 			font-size: 1.667em;
 			margin-bottom: 1.5em;
 			text-align: justify;
