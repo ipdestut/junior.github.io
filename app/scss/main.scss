@@ -74,27 +74,41 @@ header {
 	.float-panel {
 		background-color: rgba(255, 255, 255, 0.8);
 		position: fixed;
-		width: 100%;
-		height: 1.5em;
+		width: 100vw;
 		z-index: 100;
+		padding: 0.2em 0 0.3em;
 
 		p {
 			font-size: 0.8em;
 			font-style: italic;
 			text-align: right;
-			margin-bottom: 0;
+			margin-bottom: 0.2em;
 			margin-top: 0.33em;
 			color: #2d2a4b;
+			line-height: 1;
 		}
 
-		a {
-			font-size: 1em;
-			font-style: italic;
-			color: #618220;
+		.phones {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100%;
+			a {
+				font-size: 1em;
+				font-style: italic;
+				line-height: 1;
+				color: #618220;
+				position: relative;
+				margin-left: 1.4em;
 
-			&::before {
-				content: '\2706';
-				color: #54a2c0;
+				&::before {
+					content: '\2706';
+					color: #54a2c0;
+					font-size: 1.2em;
+					position: absolute;
+					left: -1.1em;
+					top: -0.1em;
+				}
 			}
 		}
 	}
@@ -105,13 +119,12 @@ header {
 		.slogan-logo {
 			margin-top: 1.5em;
 			overflow: hidden;
-
+			display: flex;
+			align-items: center;
 			p {
 				float: left;
 				font-style: italic;
 				width: 60%;
-				padding-top: 1.7em;
-
 				span {
 					display: block;
 				}
@@ -121,7 +134,9 @@ header {
 				float: left;
 				width: 40%;
 
-				img {}
+				img {
+					width: 100%;
+				}
 			}
 		}
 
@@ -175,17 +190,17 @@ header {
 						text-shadow: 0 0 0.5em #fff;
 					}
 
-					&.pos4 {
+					&.pos3 {
 						top: 0.9em;
 						left: 1.5em;
 					}
 
-					&.pos3 {
+					&.pos4 {
 						top: 3.1em;
 						left: 0.8em;
 					}
 
-					&.pos2 {
+					&.pos5 {
 						top: 4.4em;
 						left: 2.5em;
 					}
@@ -195,7 +210,7 @@ header {
 						left: 4.3em;
 					}
 
-					&.pos5 {
+					&.pos2 {
 						top: 0.9em;
 						left: 3.6em;
 					}
@@ -212,19 +227,24 @@ header {
 				right: calc(50% + 2.5em);
 				transition: background-color 1s ease-out;
 
-				&.pos1, &.pos6{
+				&.pos1,
+				&.pos6 {
 					background-color: $color-purple;
 				}
-				&.pos2{
+
+				&.pos2 {
 					background-color: $color-red;
 				}
-				&.pos3{
+
+				&.pos3 {
 					background-color: $color-orange;
 				}
-				&.pos4{
+
+				&.pos4 {
 					background-color: $color-green;
 				}
-				&.pos5{
+
+				&.pos5 {
 					background-color: $color-blue;
 				}
 
@@ -240,7 +260,8 @@ header {
 					margin-top: 3.3em;
 					opacity: 0;
 					transition: opacity 800ms ease-out;
-					&.active{
+
+					&.active {
 						opacity: 1;
 					}
 				}
@@ -256,7 +277,6 @@ header {
 				height: 9em;
 				top: 7em;
 				right: calc(50% + 7.5em);
-				transform: rotate(36deg);
 				transition: transform 1s ease-out;
 
 				p {
@@ -278,45 +298,54 @@ header {
 				background-color: rgba(255, 255, 255, 0.9);
 				border-radius: 0.55em;
 				box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-				padding: 0.8em 0.85em 0.5em 1.4em;
 				bottom: 0;
 				right: 0;
 				overflow: hidden;
-				&-wrap{
+
+				&-wrap {
 					h3 {
 						position: absolute;
-						width: 100%;
+						width: calc(100% - 2em);
 						opacity: 0;
 						font-weight: normal;
 						font-size: 1em;
 						line-height: 1.2;
 						transition: opacity 1s ease-out;
+						top: 0.8em;
+						left: 1.2em;	
 						span {
 							font-size: 1.333em;
 							display: block;
 							font-weight: bold;
 							text-transform: uppercase;
 						}
-						&.active{
+
+						&.active {
 							opacity: 1;
 						}
-						&.pos1 span{
+
+						&.pos1 span {
 							color: $color-purple;
 						}
-						&.pos2 span{
+
+						&.pos2 span {
 							color: $color-red;
 						}
-						&.pos3 span{
+
+						&.pos3 span {
 							color: $color-orange;
 						}
-						&.pos4 span{
+
+						&.pos4 span {
 							color: $color-green;
 						}
-						&.pos5 span{
+
+						&.pos5 span {
 							color: $color-blue;
-						}						
+						}
 					}
 				}
+
 				p {
 					position: absolute;
 					font-size: 0.8em;
@@ -325,7 +354,7 @@ header {
 					margin: 0;
 					bottom: 0.5em;
 					right: 0.8em;
-				}				
+				}
 			}
 		}
 
@@ -533,6 +562,24 @@ section.treners {
 		border-top: none;
 		border-right: none;
 	}
+		.lSPager.lSpg{
+			margin-top: 2em !important;
+			li{
+				padding: 0 0.5em;
+				a{
+					width: 1em;
+					height: 1em;
+					transform: scale(0.8);
+					background-color: #999;
+
+				}
+				&.active{
+					a{
+						transform: none;
+					}
+				}
+			}
+		}
 
 }
 
@@ -635,6 +682,17 @@ section.director {
 			font-size: 1.667em;
 			margin-bottom: 1.5em;
 			text-align: justify;
+		}
+	}
+}
+
+footer{
+	.social{
+		a{
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+			background: #444;
 		}
 	}
 }
